@@ -1,0 +1,60 @@
+{
+  "stac_version": "0.9.0",
+  "stac_extensions": [
+      "pla"
+  ],
+  "type": "Feature",
+  "id": "CS3-20160503_132130_04",
+  "bbox": [-122.59750209, 37.48803556, -122.2880486, 37.613537207],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [-122.308150179, 37.488035566],
+        [-122.597502109, 37.538869539],
+        [-122.576687533, 37.613537207],
+        [-122.288048600, 37.562818007],
+        [-122.308150179, 37.488035566]
+      ]
+    ]
+  },
+  "properties": {
+    "datetime": "2016-05-03T13:21:30.040Z",
+    "collection": "CS3"
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "http://cool-sat.com/catalog/CS3-20160503_132130_04/CS3-20160503_132130_04.json"
+    },
+    {
+      "rel": "collection",
+      "href": "http://cool-sat.com/catalog.json"
+    }
+  ],
+  "assets": {
+    "analytic": {
+      "href": "http://api.planet.com/asset-409-conflict",
+      "title": "4-Band Analytic",
+      "pla:status": "inactive",
+      "pla:activate_href": "http://api.planet.com/<path-to-active-4band-asset>"
+    },
+    "visual": {
+      "href": "http://api.planet.com/asset-409-conflict",
+      "title": "Visual",
+      "pla:status": "activating",
+      "pla:activate_href": "http://api.planet.com/<path-to-active-visual-asset>"
+    },
+    "analytic_5b": {
+      "href": "http://api.planet.com/actual-5band-download-url",
+      "title": "5-Band Analytic",
+      "pla:status": "active",
+      "pla:activate_href": "http://api.planet.com/<path-to-active-analytic_5b-asset>"
+    },
+    "thumbnail": {
+      "href": "http://cool-sat.com/catalog/CS3-20160503_132130_04/thumbnail.png",
+      "title": "Thumbnail",
+      "roles": [ "thumbnail" ]
+    }
+  }
+}
