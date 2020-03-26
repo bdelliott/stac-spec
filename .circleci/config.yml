@@ -18,6 +18,7 @@ jobs:
             curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
             sudo apt-get install -y nodejs
             sudo npm install -g remark-cli remark-validate-links
+            sudo npm install -g @apidevtools/swagger-cli
       - run:
           name: validate
           command: |
@@ -31,3 +32,7 @@ jobs:
             stac_validator item-spec/examples/digitalglobe-sample.json
             stac_validator item-spec/examples/CBERS_4_MUX_20181029_177_106_L4.json
             remark -f -u validate-links .
+            echo "Validating STAC.yaml:"
+            swagger-cli validate api-spec/STAC.yaml
+            echo "Validating STAC-extensions.yaml:"
+            swagger-cli validate api-spec/STAC-extensions.yaml
